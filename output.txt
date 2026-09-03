@@ -1,0 +1,2 @@
+hello codegnan
+Buffered writer is faster for large text files

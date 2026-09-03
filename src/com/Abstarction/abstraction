@@ -1,0 +1,42 @@
+Abstarction
+
+-hiding the internal implementation and exposing the relevant details.
+
+java allows two ways to abstract
+
+-abstract classess :  allows us to create both abstract methods and Implemented method.
+
+-interface
+
+Abstract classes:
+syntax:
+abstract class className{
+//methods --can be create  in two types
+
+1.method with Implementation or concrete method
+example:
+public void do(){
+//Implementation logic
+}
+
+2.method without Implementation or abstract method
+example:
+public void dotask();
+
+//variables
+//constructors
+
+}
+
+
+object creation is not possible for the abstract class
+but we can create object for the class which extends the abstract class.
+
+abstract class always begin with the abstract keyword.
+and also required the abstract keyword while creating the methods in the abstract which are abstract methods.
+
+abstract class which extended by the concrete class must and should provide the implementation for the unimplemented method in the extended class.
+
+
+
+ 

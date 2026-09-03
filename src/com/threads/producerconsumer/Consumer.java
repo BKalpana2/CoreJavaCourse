@@ -1,0 +1,23 @@
+package com.threads.producerconsumer;
+
+public class Consumer extends Thread{
+
+private MessageBox messageBox;
+	
+	public Consumer(MessageBox messageBox)
+	{
+		this.messageBox = messageBox; //Aggregation relationship 
+	}
+	
+	public void run()
+	{
+	
+		try {
+			messageBox.consume();
+			messageBox.consume();
+			messageBox.consume();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}

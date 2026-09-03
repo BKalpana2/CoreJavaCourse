@@ -1,0 +1,95 @@
+Interfaces:
+
+Interface in java is blueprint which define set of abstarct methods and constants that a class can implement
+
+Basic rules of Interfaces:
+-An interface defines a contract,it specifies what a class must be able to do.
+-It will not provide the implementation,the implementation must be provided by the implemented class.
+
+syntax:
+
+interface InterfaceName{
+//variables
+int age;
+//abstract mehtods
+}
+
+-Any class implementing the interface must provide implementation to interface 's abstract methods.
+
+	-we cannot create object for interface
+	-we cannot create constructor for interface
+	-we cannot create instance variables for interface.
+	-when a variable is declared in interface it automatatically becomes a 	       	  public static final
+	
+	-Before java 8 interface only allowed abstract methods.
+	-java 8 has introduced default and static methods in the interface.
+	-Java 9 + versions has introduced the private methods.
+	
+	-Thhe class sin which we use the interface must use the keyword "implements"
+	
+	example:if MyInterface is an interface
+	and myclass is a class
+	
+	-Then myclass must use the interface as follows
+	myclass implements myinterface
+	
+	-A class can implement multiple interfaces this refer to has multiple interface implementation.
+	
+	-interface =contact/capability
+	abstract class=common base with shared state and behaviour.
+	
+	-we use interface when we only want to define a contract.
+	we use abstract classes when we want common instance variables and state for an object.
+	
+	-we use abstract class when we need constructors,interface cannot have constructors.
+	
+	-when we want to describe what an object "Is" then consider the abstract class
+	when we want to describe what an object "Can Do" we consider the interfaces.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	Responsible Use of Technology – 5 Unique Points
+	
+1. Technology should be a tool, not a dependency
+
+“Technology is designed to make our lives easier, but we should not become completely dependent on it. We must maintain our ability to think, communicate, and solve problems independently.”
+
+2. Digital privacy is our responsibility
+
+“In the digital world, protecting personal information is extremely important. We should be careful about sharing passwords, financial details, photographs, and other private information online.”
+
+3. Responsible technology use means verifying information
+
+“Today, information spreads within seconds. Before forwarding or sharing any content, we should verify its authenticity. Responsible users should contribute to reducing misinformation rather than spreading it.”
+
+4. Technology should be used ethically
+
+“We should use technology with respect for others. Cyberbullying, online harassment, and misuse of artificial intelligence are examples of unethical technology use that can harm individuals and society.”
+
+5. We need a balance between the digital and real world
+
+“Technology should improve our quality of life, not control it. Maintaining a healthy balance between screen time, personal relationships, education, work, and physical activities is essential.”
+
+
+Strong closing line
+“Ultimately, responsible use of technology is not about limiting technology; it is about using it with awareness, ethics, and accountability.”

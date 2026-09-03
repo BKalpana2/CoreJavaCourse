@@ -1,0 +1,481 @@
+Java provides two ways to create a thread:
+
+1. By extending Thread class
+  Steps:
+ - Create a class that extends thread
+ - override the run() method
+ - write the task or work inside the run() method
+ - create an object of the class
+ - call the start() to start a new thread. never call run() method directly to start a method
+ - the new thread exectescthe run() method
+
+-> run() method defines the work
+-> start() method starts a new method
+
+2. By impelemting Runnable interface
+ Steps:
+ - create a class which implements Runnable interface
+ - override the run() method
+ - write the task/work inside run()
+ - To use the thread created by implementing runnable interface
+   Create an object to the task(runnable)class
+   Pass the eunnable object to a Thread object
+   call start() method to the Thread object
+   The new Thread executes the runnable's run() method
+   
+   Life cycle or states of thread : 
+   A thread moves through different stages from creation to completion.
+   
+   There are 6 states of thread.
+   
+   1..New state : 
+    	A thread has been created but start() method is not yet called.
+    	example : Thread t=new Thread();
+    	In the above thread object is created but thread not started.
+   2..Runnable state : 
+   	   when start() method is called , the thread enters the Runnable state.
+   	   example: t.start();
+   		-thread is ready and waiting for cpi
+   		-once cpu schedules this thread , the thread will start executing
+   		-threadschedular decides which runnable thread gets cputime.
+   3..Blocked state :
+   A thread goes into blocked state when it is waiting to acquire a lock to synchronized code.
+   
+   4..waiting state : 
+   		A thread enters waiting state when it waits for another thread.
+   		
+   5..timed_waiting:
+   	A thread enters Timed_waiting state when it waits for specific amount of time.
+   	
+   	eg: sleep(1000);
+   
+   6..Terminated state :
+   	A thread enters Terminated state when its run() method finishes execution.
+   	
+   Join() method : 
+   Join() methods used when one thread as to wait for another thread to finish.
+   Join() makes the currently executing thread wait until the thread on which join() is called competes
+   
+   syntax:
+   thread.join();
+   
+   example : task.join()
+   
+   Note : In the above ,it does not mean that task thread is waiting.
+   task thread will execute and currently running thread() main thread will wait until the task thread completes.
+   
+   ==>we use join() when the next operation depends on the result of another thread.
+   
+   
+   we can specify the maximum waiting time for join() method 
+   example: thread.join(2000);
+   It means that current thread waits upto 2000 milliseconds for thread.
+   
+   join() method throws a checked exception called InterruptedException
+   since its a checked exception ,we must handle or declare it.
+   
+   join() is an instance method of thread class.
+   
+   It is used for thread coordination.
+   
+   Method Synchronisation
+   
+   when multiple threads access and modify the shared data,incorrect results may occur because threads can execute simultenously 
+   
+   synchronization is a mechanism used to control access to a shared data resource when multiple thread are executing concurrently.
+   
+   It prevents the race condition
+   Race condition : 
+   Race condition is a condition when multiple threads try to modify the shared resources
+   
+   To avoid this race condition we use a keyword "synchronized"
+   
+   When thread enters a synchronized method it acquires the lock of the object.
+   
+   other threads trying to execute the synchronized method on the same object must wait until the lock is released.
+   
+   when a thread is executing synchronized method other same object must wait until the lock is released.
+   
+   when a thrad completes its task,it releases the lock and changes made by thread will updated in the main memory .
+   Then,the next thread acquires the lock,it reads the values from the main memory.
+   
+   wait() , notify() ,notifyAll() : 
+   ===========================================
+   These methods are used for inter-thread communication.
+   
+   When threads are working with the same shared resources,these methods allow the threads to coordinate with each other.
+   
+   1.wait() : 
+   	wait() makes the current thread wait until the another thread notifies it.
+   	
+   	wait() method releases the monitor/lock of the object which wait is called.
+   	
+   	wait() is normally used inside synchronized method or block.
+   	It throws InterruptedException 
+   	we normally use wait() inside a while loop,so that the condition is checked again after waking.
+   	
+   2.notify() :
+   notify() methods gives a signal to a thread that is waiting on the same objects monitor.
+   
+   3.notifyAll() : 
+   when multiple threads are waiting for a resource , notifyAll method is called to send a signal to all threads.
+   
+   Example : producer and consumer
+   
+   1.when the messagebox is full , the producer waits by calling wait()
+   2.producer produces the message only when the message box is empty.
+   3.once the producer produces the message ,it calls notify() method to signal the consumer that the message is available.
+   
+   consumer : 
+   1.when the messagebox is empty,the consumer waits by calling wait()
+   2.consumer consumes the message only when the messageBox is full.
+   3.once consumer consumes the message ,it calls notify() method to signal the producer that the message has been consumed
+   4.Now , the producer will produce the message in the messageBox.
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   1. What is the first proportional to 12, 36, 4?
+A) 108
+
+B) 12
+
+C) 3
+
+D) 48
+✅ Correct: 12
+
+2. What is the second proportional to 21, 7, 42?
+A) 14
+
+B) 7
+
+C) 42
+
+D) 21
+
+
+3. What is the third proportional to 5, 6, and 277?
+A) 3324
+
+B) 277
+
+C) 6
+
+D) 5
+
+
+4. What is the fourth proportional to 12, 5, and 277?
+A) 115.4
+
+B) 277
+
+C) 12
+
+D) 5
+
+
+5. What is the third proportional of 4 and 28?
+A) 196
+
+B) 28
+
+C) 4
+
+D) 7
+
+
+Would you like me to continue with the next set (6–10), or do you want to try solving these first before I reveal the rest?
+
+
+
+6. What is the third proportional of 9 and 81?
+A) 729
+
+B) 81
+
+C) 9
+
+D) 243
+
+7. If x is the third proportional of 4 and 8, then the value of x is
+A) 16
+
+B) 32
+
+C) 8
+
+D) 4
+
+8. What number when added to each of the numbers 5, 7, 15, 17 will make the resulting numbers proportional?
+A) 3
+
+B) 2
+
+C) 5
+
+D) 7
+
+9. Find the fourth proportional to 12, 18, and 6
+A) 9
+
+B) 12
+
+C) 18
+
+D) 6
+
+10. If number k is same as the third proportion to k and 6. What is the value of k?
+A) 0
+
+B) 6
+
+C) 36
+
+D) 1
+
+11. The mean proportional between 3 + √2 and 3 - √2 is
+A) √7
+
+B) √5
+
+C) √9
+
+D) √3
+
+12. If the fourth proportional of 3, 4, and 9 and the mean proportional between 2 and 8?
+A) 12 and 4
+
+B) 9 and 6
+
+C) 3 and 8
+
+D) 4 and 2
+
+13. If the mean proportional between a and b is 27 times the third proportional of 3 and b. Find the value of a/b.
+A) 81
+
+B) 9
+
+C) 27
+
+D) 3
+
+14. What is the ratio of mean proportional between 4, 8, and 10, 8, and the third proportional to 4 and 8?
+A) 2:1
+
+B) 1:2
+
+C) 4:1
+
+D) 1:4
+
+15. If 57.6 is the mean proportional between 12.8 and 64.8 and it’s the third proportional to 38.4 and 57.6, then 2x²y is equal to
+A) 2550
+
+B) 2552
+
+C) 2554
+
+D) 2556
+
+✅ Answer Key
+1 → B
+2 → B
+3 → A
+4 → A
+5 → A
+6 → A
+7 → A
+8 → B
+9 → A
+10 → B
+11 → A
+12 → A
+13 → B
+14 → A
+15 → B
+
+
+
+1. What is the first proportional to 12, 36, 4?
+
+A) 108
+
+B) 12
+
+C) 3
+
+D) 48
+
+2. What is the second proportional to 21, 7, 42?
+
+A) 14
+
+B) 7
+
+C) 42
+
+D) 21
+
+3. What is the third proportional to 5, 6, and 277?
+
+A) 3324
+
+B) 277
+
+C) 6
+
+D) 5
+
+4. What is the fourth proportional to 12, 5, and 277?
+
+A) 115.4
+
+B) 277
+
+C) 12
+
+D) 5
+
+5. What is the third proportional of 4 and 28?
+
+A) 196
+
+B) 28
+
+C) 4
+
+D) 7
+
+6. What is the third proportional of 9 and 81?
+
+A) 729
+
+B) 81
+
+C) 9
+
+D) 243
+
+7. If x is the third proportional of 4 and 8, then the value of x is
+
+A) 16
+
+B) 32
+
+C) 8
+
+D) 4
+
+8. What number when added to each of the numbers 5, 7, 15, 17 will make the resulting numbers proportional?
+
+A) 3
+
+B) 2
+
+C) 5
+
+D) 7
+
+9. Find the fourth proportional to 12, 18, and 6
+
+A) 9
+
+B) 12
+
+C) 18
+
+D) 6
+
+10. If number k is same as the third proportion to k and 6. What is the value of k?
+
+A) 0
+
+B) 6
+
+C) 36
+
+D) 1
+
+11. The mean proportional between 3 + √2 and 3 - √2 is
+
+A) √7
+
+B) √5
+
+C) √9
+
+D) √3
+
+12. If the fourth proportional of 3, 4, and 9 and the mean proportional between 2 and 8?
+A) 12 and 4
+
+B) 9 and 6
+
+C) 3 and 8
+
+D) 4 and 2
+
+13. If the mean proportional between a and b is 27 times the third proportional of 3 and b. Find the value of a/b.
+
+A) 81
+
+B) 9
+
+C) 27
+
+D) 3
+
+14. What is the ratio of mean proportional between 4, 8, and 10, 8, and the third proportional to 4 and 8?
+
+A) 2:1
+
+B) 1:2
+
+C) 4:1
+
+D) 1:4
+
+15. If 57.6 is the mean proportional between 12.8 and 64.8 and it’s the third proportional to 38.4 and 57.6, then 2x²y is equal to
+
+A) 2550
+
+B) 2552
+
+C) 2554
+
+D) 2556
+
+
+   
+   
+   
+   
+   
+   
+   
+   
+  
+
+
+
+
+
+   
+   
+   
+   
+   
+   
+   

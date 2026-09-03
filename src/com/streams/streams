@@ -1,0 +1,60 @@
+A stream represents a sequence of bytes or characters that can be reading from a  file/resource or written to file/resource I/O streams are used for input and output operations on various data sources,such as files,network connections and in-memory buffers.
+
+if you are read a file from the source    --inputStream.
+if you are write data to a destination    --outputStream.
+
+They are two types of streams 
+
+1.Byte Stream : 
+It provides a convinient means for handling input and ouput of byte.
+
+2.Character Stream :
+
+
+===============================
+Methods in the Files
+
+1.createNewFile() -> to create the file
+2.exits() returns boolean value true or false,if file exist it return true if not it return false.
+3.mkdir() -> is used to create a directory.
+4.dir.isdirectory() -> to check the whether the that is directory is or not.
+5.isFile() -> to check the whether that is file or not. 
+
+
+try with resources
+
+try( resources ){
+ //code
+ }catch(Exception e){
+ //exception handling
+ }
+we can put the resource in try block which can implement the autocloseable interface.
+
+
+Resources like FileReader,FileWriter,..etc. utilizes system resources.once the operation is completed that resource must be released.
+To release these resources we need to call close() method in each of the resources.
+
+Generally we call the close() in the finally block to make sure that the resources is closed regarless of an exception.
+
+we csn even avoid calling close() method explicitily in finally block.
+TO avoid calling close() method explicitly.
+we need to use try with resources.
+
+try with resources has a seprate syntax,try followed with braces. Inside these braces we need create the resources for eg: Filewriter
+
+When the resource is kept inside these braces,
+try with resource will automatically close the resource.
+we donnot have to call close() method explicitly.
+
+The resources which are kept inside try with resource brackets,must implements autocloseable interface.
+
+The resource implementing Autoclosable will be automatically closed.
+This avoids the resource leakage problem in the application.
+
+Resource leakage means when a program opens I/O streams like FileWriter,FileReader,Connection Statement ,scanner ... etc.
+but fails to close it after use,the system resources like file handles and memory will remaining occupied.
+
+This is called Resource leakage.
+
+
+

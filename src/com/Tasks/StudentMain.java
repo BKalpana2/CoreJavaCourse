@@ -1,0 +1,96 @@
+package com.Tasks;
+import java.util.Scanner;
+public class StudentMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Student s1 = new Student();
+		System.out.println("Enter the id for student1 : ");
+		s1.id = sc.nextInt();
+		System.out.println("Enter the name : ");
+		s1.name = sc.next();
+		System.out.println("Enter the branch : ");
+		s1.branch = sc.next();
+		System.out.println("Enter the marks : ");
+		s1.marks = sc.nextInt();
+		System.out.println("Enter the gender : ");
+		s1.gender = sc.next().charAt(0);
+		System.out.println("Enter the course : ");
+		s1.course = sc.next();
+		System.out.println("----------------------");
+		  Student s2=new Student(); 
+		  System.out.println("Enter the id for student2 : ");
+		  s2.id=sc.nextInt();
+		  System.out.println("Enter the name : ");
+		  s2.name=sc.next(); 
+		  System.out.println("Enter the branch : ");
+		  s2.branch=sc.next(); 
+		  System.out.println("Enter the marks : ");
+		  s2.marks=sc.nextInt(); 
+		  System.out.println("Enter the gender : ");
+		  s2.gender=sc.next().charAt(0); 
+		  System.out.println("Enter the course : ");
+		  s2.course=sc.next(); 
+		  System.out.println("----------------------");
+		  Student s3=new Student();
+		  System.out.println("Enter the id for student3 : "); 
+		  s3.id=sc.nextInt();
+		  System.out.println("Enter the name : ");
+		  s3.name=sc.next();
+		  System.out.println("Enter the branch : "); 
+		  s3.branch=sc.next();
+		  System.out.println("Enter the marks : "); 
+		  s3.marks=sc.nextInt();
+		  System.out.println("Enter the gender : "); 
+		  s3.gender=sc.next().charAt(0);
+		  System.out.println("Enter the course : ");
+		  s3.course=sc.next();
+		  System.out.println("----------------------");
+		  Student s4=new Student();
+		  System.out.println("Enter the id for student4 : "); 
+		  s4.id=sc.nextInt();
+		  System.out.println("Enter the name : "); 
+		  s4.name=sc.next();
+		  System.out.println("Enter the branch : "); 
+		  s4.branch=sc.next();
+		  System.out.println("Enter the marks : "); 
+		  s4.marks=sc.nextInt();
+		  System.out.println("Enter the gender : "); 
+		  s4.gender=sc.next().charAt(0);
+		  System.out.println("Enter the course : "); 
+		  s4.course=sc.next(); 
+		  System.out.println("----------------------");
+		  Student s5=new Student();
+		  System.out.println("Enter the id for student5 : "); 
+		  s5.id=sc.nextInt();
+		  System.out.println("Enter the name : ");
+		  s5.name=sc.next();
+		  System.out.println("Enter the branch : ");
+		  s5.branch=sc.next();
+		  System.out.println("Enter the marks : "); 
+		  s5.marks=sc.nextInt();
+		  System.out.println("Enter the gender : ");
+		  s5.gender=sc.next().charAt(0);
+		  System.out.println("Enter the course : "); 
+		  s5.course=sc.next();	 
+		Student[] arr1 = new Student[5];
+		arr1[0] = s1;		
+		  arr1[1]=s2; 
+		  arr1[2]=s3;
+		  arr1[3]=s4; 
+		  arr1[4]=s5;
+		  System.out.println("Length : " + arr1.length);
+		for (Student arr : arr1) {
+			System.out.println("----------------------");
+			System.out.println("Details of " + arr.name);
+			System.out.println("Id : " + arr.id);
+			System.out.println("Name : " + arr.name);
+			System.out.println("Branch : " + arr.branch);
+			System.out.println("Gender : " + arr.gender);
+			System.out.println("Marks : " + arr.marks);
+			System.out.println("Course : " + arr.course);
+		}		
+		sc.close();
+
+	}
+
+}
