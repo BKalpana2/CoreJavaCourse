@@ -1,0 +1,50 @@
+Collections
+
+collections framework -interfaces,implementations,alogorithms 
+
+All the collections there in a package of java.util package
+collection is nothing but a collection of java objects.
+ 1.List --Interface  -have duplicates elements,it follow the order
+ list is a ordered collection.
+ 
+ 2.Set --Interface  -have unique elements 
+ 
+ 3.Map --Interface - (key , value )pairs example (91,India) (001 , Us) 
+ 
+ Collections                                        -> Interface
+ 1.collection --Interface                           -   class
+ 	->list --Interface
+ 		-arraylist
+ 		-linkedlist
+ 		-stack
+ 		-vector
+ 	->queue --Interface
+ 		-priority queue
+ 	  ->Deque interface  -ArrayDeque implements the deque interface. 
+ 	->set --Interface
+ 		-hashset
+ 		-linkedhashset
+ 		-treeset
+ 2.Map --Interface
+ 		-hashtable
+ 		-linkedhashmap
+ 		-hashmap
+ 		-treemap
+ 
+ 
+ collections methods
+ 
+ Advantages of collections framework
+ 
+ 		
+ 1.collection
+    1.list --interface
+     	1.Arraylist -class
+ 		growable array
+ 		Arraylist is a hetrogenous data.
+ 	ArrayList def : 
+ 	"We use ArrayList when we need a dynamically resizable collection that maintains insertion order and allows duplicate elements. It also provides convenient methods to add, remove, access, and update elements."
+
+ 
+  
+ 
