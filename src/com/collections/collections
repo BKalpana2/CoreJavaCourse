@@ -37,6 +37,7 @@ collection is nothing but a collection of java objects.
  Advantages of collections framework
  
  		
+
  1.collection
     1.list --interface
      	1.Arraylist -class
@@ -45,6 +46,95 @@ collection is nothing but a collection of java objects.
  	ArrayList def : 
  	"We use ArrayList when we need a dynamically resizable collection that maintains insertion order and allows duplicate elements. It also provides convenient methods to add, remove, access, and update elements."
 
+ Iterable interface:
+ Iterable interface is the root interface which makes an object eligible for iteration using enhanced for loop.
  
   
+  collections implement iterable interface : 
+  for example : 
+  Arraylist -> List -> Collection -> Iterable
+  
+  -most important methods of iterable is iterator()
+  Iteration<T> iterator()
+  -it provide iterator onject which can move through elements one by one.
+  
+  concurrentModificationException
+  =========================================================================
+  concurrent modification exception occurs when a collection is modified unexpectedly while it is being iteration.
+
+Structural modification: Adding or removing elements elements in such a way that is changes the structure of the collection.
+
+concurrent does not mean mulitple threads,this exception occur even with a single  thread.
+
+Reason for Exception when enhanced for loop is used : 
+===================================================================
+ArrayList internally uses Iterator.
+-In the enhanced for loop the Iterator traverse/iterators the list.
+-countriesList.remove() in example,modifies the list directly.
+-Iterator detects unexpected modification in the structure.
+-so, the concurrent modification exception is thrown.
+-The problem is occured because the collection is modified directly while iterator is traversing the collection.
+
+eg: countriesList.remove(country); //here remove is the method of arrayList. 
+
+When Iterator is explicitly used : 
+==================================================================
+iterator.remove() is a method which is specifically designed to safely remove the current element during iterator.
+eg : iterator.remove();
+
+failfast:
+========
+ArrayList iterator is know as failfast iterator.
+A Fail fast means when ever an iterator detects unexpected structural modification to the collection during iteration,the iterator quickly throws ConcurrentModificationException.
+ Collection interface : 
+ Collection extends iterator
+ Important methods
+ add()
+ remove()
+ contains()
+ size()
+ isEmpty()
+ clear()
+ iterator()
+ 
+ -Most of the collections framework classes provide implementation to the above methods.
+ 
+ 1==>List Interface : 
+ ------------------------
+ List extends collection interface.
+ List represents the ordered collection of elements.
+ List allows duplicates.
+ List supports index-based operations.
+
+Important methods of list : 
+	-get(index)
+	-set(index,element)
+	-add(index,element)
+	-remove(index)
+	-indexOf(element)
+	
+Implementataion classes of list : 
+	-ArrayList,LinkedList,vector->stack.
+1.ArrayList :
+	-ArrayList implements the List Interface.
+	-It internally uses resizeable array.
+	-It maintains insertion order.
+	-It allows dupicates.
+	-It has fast random access using index.
+	(It internally implements Random access interface)
+	-Time complexity is o(1)
+	-Insertion and removal in the middle may require shifting of the elements 
+	-ArrayList is not sychronized.
+	-It is best suited for the search operations.
+	 
+2.LinkedList :
+	-LinkedList implements List interface.
+	-It internally works different from ArrayList.
+	-It allows null
+	-It maintains insertion order.
+	-It allows nodes rather than a resizable array.
+	-It also implements Deque interface.
+	
+
+ 
  

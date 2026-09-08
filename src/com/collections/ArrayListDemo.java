@@ -40,7 +40,6 @@ public class ArrayListDemo {
 			System.out.println(emp);
 		}
 		
-		
 	}	
 }
 
