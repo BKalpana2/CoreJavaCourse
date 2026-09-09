@@ -135,6 +135,96 @@ Implementataion classes of list :
 	-It allows nodes rather than a resizable array.
 	-It also implements Deque interface.
 	
+3.Stack :
+
+	- Stack is a class in java.util package.
+	- It reperesents a LIFO(last In First Out) data structure 
+	- The last element inserted in the first element removed.
+
+		eg: Stack of books on a table
+    	Stack of plates in a table
+
+	Stacks extends Vector
+	So, Stack indirectly implements the List interface 
+	Since, stack extends vector, its inherited methods are synchronized
+	
+	Methods :
+	1.push() -add element to the top 
+	2.pop() -removes and returns the top element
+	3.peek() -returns the top element without removing 
+	
+	Stack allows the duplicates .
+	It maintains the insertion order.
+	
+	Cursors : 
+	=========
+	
+	A cursor is an object used to traverse or access elements of a collection one by one.
+	
+	In java collections framework, we have 3 main cursors : 
+	1.Enumeration : 
+		-Oldest type of cursor in java .
+		-It is mainly used with vector and hashTable 
+		-Enumeration can retrieve elements but it cannot remove them.
+		
+		Methods : 
+		hasMoreElement()
+		hasNextElement()
+		
+	2.iterator :
+	 widely used
+	 universal cursor used in any type of collection.
+	 -Iterator is a cursor used to traverse elements of collection one by one in forward direction.(uni directional)
+	 -Iterator is interface it supports works with most collections implementation like : LinkedList,ArrayList,Vector,Stack,HashSet,LinkedHashSet,TreeSet.
+	 -It can read and remove elements while traversing.
+	 -It does not provide add() and set() methods.
+	 -It is unidirectional ,traverse only in forward direction.
+	 
+	 Methods:
+	 
+	 -hasNext()
+	 -next()
+	 -remove()
+	
+	3.Listiterator : 
+	Listiterator extends iterator interface .
+	It is avaiable only for List implementations.
+	Examples: ArrayList,LinkedList,Vector and stack.
+	It supports bidirectional traversal - forward and backward .
+	It can read ,add , remove and replace elements during iteration.
+	
+	
+3.Set :
+
+set is an interface in java.util package.
+Its implementations are : hashset,linkedhashset and treeset.
+
+	1.HashSet
+		-hashset do not allow the duplicates.
+		-hashset will not maintain the insertion order.
+		
+	*For classes like String, java already provides proper equals() and hashCode(). so if duplicates Strings or integers are added into the hashSet ,hashset can detect that they are duplicated.
+	*For custom class like student ,
+	Even though two objects are having similar data,hashset considers them as two different objects because the equals() method in hashset will check only the object identity(address).
+		
+	*We need to override equals() and hashcode() to avoid dupication of custom objects.
+	
+	*For this , first we need to find the logical definations of equality
+	for example : 
+	for student objects,
+	we can say ,that the two students are same if their studentid is same 
+	OR
+	for Employee object :
+	we can say that two employees are same if their employeeid is same. 
+	
+	
+	2.LinkedHashSet : 
+		-LinkedHashSet will maintain the insertion order.
+		-It will not allow the duplicates.
+	
+	
+	
+	
 
  
  
