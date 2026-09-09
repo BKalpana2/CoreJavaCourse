@@ -115,6 +115,21 @@ Important methods of list :
 	
 Implementataion classes of list : 
 	-ArrayList,LinkedList,vector->stack.
+	
+	Method	Meaning	Example
+add()	Add element	list.add("Java");
+add(index, element)	Add at particular position	list.add(1, "Python");
+get(index)	Get element	list.get(0);
+set(index, element)	Replace element	list.set(0, "C++");
+remove(index)	Remove by index	list.remove(0);
+remove(object)	Remove particular element	list.remove("Java");
+contains()	Check element exists	list.contains("Java");
+size()	Number of elements	list.size();
+isEmpty()	Check whether empty	list.isEmpty();
+clear()	Remove all elements	list.clear();
+indexOf()	First occurrence index	list.indexOf("Java");
+lastIndexOf()	Last occurrence index	list.lastIndexOf("Java");
+	
 1.ArrayList :
 	-ArrayList implements the List Interface.
 	-It internally uses resizeable array.
