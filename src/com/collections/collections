@@ -237,9 +237,61 @@ Its implementations are : hashset,linkedhashset and treeset.
 		-LinkedHashSet will maintain the insertion order.
 		-It will not allow the duplicates.
 	
+	COMPARABLE INTERFACE : 
 	
+	comparable is an interface,it is used to define natural or default ordering of objects of a class.
+	for eg: if we have many employee objects,java does not automatically know whether employees should be sorted by id or name or something else.
+	By implementing comparable interface,
+	we can tell java how to sort the employee objects by overriding the method compareTo.
+	compareable interface is available in java.lang package 
+	It is generic interface.
+	The class whose objects need to be compared implements comparable interface.
+	we override the compareTo method.
+	After override the compareTo method.
+	compareTO() method : 
 	
+	syntax : 
+	object1.compareTo(object2)
 	
+	eg: emp1.compareTo(emp2)
+	
+	compareTo() will returns an integer value.
+	It returns 
+	 - 0 -> both objects are equal .
+	 - negative value -> first object is lesser than the second object value.It returns the current object must come before the other object.
+	 - It returns a positive value when the current object must come after the other object.
+	 
+	 COMPARATOR : 
+	 
+	 Comparator is an interface.
+	 It is uses to define custom custom sorting logic for objects .
+	 It is present in java.util.
+	 
+	 with comparable, we can define only one natural ordering inside the table.
+	 with comparator, we can define multiple different sorting rules outside the class
+It has a method:
+	 int compare(T obj1,T obj2 );
+	 It compares two objects at a time.
+	 
+	 compare () method returns an int value : 
+	 	 - 0 -> both objects are equal .
+	 - negative value -> first object is lesser than the second object value.It returns the current object must come before the other object.
+	 - It returns a positive value when the current object must come after the other object.
+	 
+	Comparable vs comparator
+	===============================
+	1.comparable is in java.lang
+	comparator is in java.util
+	2.comparable must be used in the same class
+	comparator is used in an external different class which is used as custom comparator.
+	3.comparable interface has a single method 
+	int compareTo(T o)
+	comparator interface has a method : 
+	int compare(T o1 , T o2)
+	4.comparable defines natural/default orderring of a class 
+	comparator defines custom ordering.
+ 	we use comparable when there is only way to sort the objects.
+ 	we use comparator when we need different ways to sort the same objects.
 
  
  
