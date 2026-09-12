@@ -292,6 +292,66 @@ It has a method:
 	comparator defines custom ordering.
  	we use comparable when there is only way to sort the objects.
  	we use comparator when we need different ways to sort the same objects.
+ 	
+ 	2..Map : 
+ 	Map is used to store the data in the form of key value pairs.
+ 	eg : 
+ 	Aadhar - citizen
+ 	StdCode - place
+ 	Pancard - Person
+ 	EmployeeId - name
+ 	
+ 	characterstics : 
+ 	-Data is stored in key value pairs.
+ 	-eg : 
+ 	HashMap map=new HashMap();
+ 	map.put("100001","Kalyan");
+ 	map.put("10002","Ravikumar");
+ 	
+ 	-keys must be unique.
+ 	-values can be duplicated.
+ 	-Each key is associated with one value.
+ 	-A value is retrieved using its key
+ 	-Map is not a child of the collection interface.
+ 	-Map is part of a collections framework,but map does not extends collection interface.
+ 	-key value pairs is called as a entry 
+ 	eg: 
+ 	citizens.put("10002","kalyan"); -->entry.
+ 	
+ 	Different implementations classes of map interface : 
+ 		1.HashMap
+ 		2.LinkedHashMap
+ 		3.TreeMap
+ 		4.HashTable
+ 		
+ 1..HashMap : 
+ HashMap terms and methods :
+ 
+ 	-Entry represents one key value pair in a Map.It's type is Map.Entry <K,V> 
+ 	-1.entrySet() : Returns a set containing all entries(key-value pairs) 	of the Map.
+ 	-we use it when we need both key and values.
+ 	-2.getKey() : returns the key from Map.Entry
+ 	eg: entry.getkey()
+ 	-3.getValue() :Returns the value from a Map.Entry
+ 	eg:entry.getValue()
+ 	-4.put(key,value) : Adds a new Key-value pairs.
+ 	If the key is already existing , its old value is replaced with new 	value.
+ 	-5.get(key) : returns the value associated with the given key.
+ 	-keySet(): returns the set of all the keys in the map.
+ 	-values(): returns a collections containing all values in the map.
+ 	values may contains the duplicates.
+ 	-5.containsKey(key):checks whether the specified key exists and 	returns the boolean. 
+2..LinkedhashMap : 	
+It stores  elements as key-value pairs just like hashmap
+But linked hashmap maintains the insertion order by default that order is the insertion order of the keys.
+It uses a hashtable for storing and locationg entries.
+
+Allows one null key and duplicate null values.
+linkedhashmap more memory than hashmap because it maintains links.
+so ,insertion is not required always use hashmap because it consumes less memory than linked hash map.
+ 
+ 		
+ 	
 
  
  
