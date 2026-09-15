@@ -351,7 +351,85 @@ linkedhashmap more memory than hashmap because it maintains links.
 so ,insertion is not required always use hashmap because it consumes less memory than linked hash map.
  
  		
- 	
+ 3.Queue : 
+ Queue follows FIFO -first in first out
+ 
+ The element inserted first is removed first.
+ 
+ -queue is an interface in java.util package.
+ -It extends collection interface.
+ important methods:
+ size()
+ isEmpty()
+ contains()
+ clear()
+ 
+ Queue specific methods : 
+ Insertion - add() offer(e)
+ 
+ add():
+ -method inserts the element 
+ -Returns true if successful
+ -But if insertion fails it throws the IllegalStateException.
+ 
+ offer(): 
+ -Insert an element.
+ -Returns true If successful.
+ -But if insertion fails it returns false.
+ 
+ Implementations of queue interface : 
+ 1.LinkedList
+ 2.ArrayDequeue
+ 3.priority queue
+ 
+ 
+ 1.LinkedList : 
+ -LinkedList is used as both list and queue or deque.
+ -LinkedList implements both List and Deque interface.
+ 
+ Deque Interface  : 
+ -Deque standards for double edged or double ended queue.
+ -It is called double ended because elements can be inserted and deleted from both     ends(Both ends means front and rear).
+ -Linked list and arraydeque classes implements deque interfcae.
+ 
+ 1.ArrayDeque internally uses a resizeable array.
+ 2.Linkedlist internally uses a doubly linked nodes.
+ 
+ 3.ArrayDeque occupies less memory because each node stores previous and next   references.
+ 
+ 4.ArrayDeque is faster for adding and removing elements at the end.
+ 
+ 5.ArrayDeque does not allows the null.
+ 6.Linkedlist allow null.
+ 
+ 7.It is best to use ArrayDeque when you only need the deque or stack operations.
+ 8.It is best to use linkedlist when you need list operations.
 
+ Important methods of Deque interface : 
+ addFirst()
+ addLast()
+ offerFirst()
+ offerLast()
+ removeFirst()
+ removeLast()
+ pollFirst()
+ pollLast()
+ getFirst()
+ getLast()
+ peekFirst()
+ peekLast()
+ 
+ Stack style methods : 
+ push()
+ pop()
+ peek()
+ 
+ 2.Pririty Queue :
+ -priorityqueue is a class which implements queue interface.
+ -It is used to process the elements based on the priority rather than the insertion order.
+ -Elements in priority queue follows the natural order by default.
+ -For number, the smallest number gets the highest priority .
+ -For strings alhabetical(lexicographical) order is used.
+ -For custom objects,we can provide a comparator to define a priority.
  
  
