@@ -1,0 +1,19 @@
+Java 8 Features : 
+
+Java 8 Introduced in the year of 2014.
+	=====================
+	1.Interfaces :
+-static methods.
+-Default methods. ->A method which have a default 
+	default void myMethod(
+	{
+
+	}
+	static void myMethod()
+	{
+    
+    }
+    ======================
+    2.Functional Interface : 
+    	-SAM or Single Abstract method in interface.
+    	-
