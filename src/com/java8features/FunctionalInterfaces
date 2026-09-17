@@ -1,0 +1,113 @@
+Functional interfaces are present in the java.util
+predefined functional interfaces.
+1.predicate
+2.
+3.
+4.
+
+=>1.Predicate : ->If you want to check the condition.
+
+1.predicate : 
+predicate functional interdace present in the java.util.function package.
+predicate has a method test with a single argument and return the boolean
+Introduced in the java 8 version.
+predicate is a functional interface only have 1 abstract method test()
+interface Predicate<T>{
+public boolean test(T t);
+}
+
+2.BiPredicate : 
+Bipredicate is a functional interface in java that accepts two inputs and can return a boolean value.
+It is similar to the predicate interface.
+The only difference is that is takes two inputs instead of one.
+
+=>2.Function : 
+
+1.Function :
+1.Takes Input
+2.performs operation on input
+3.and returns the output
+
+2.BiFunction : 
+ BiFunction<T,U,R>
+t,u->method arguments
+r->function result.
+
+Function chaining : 
+The process of passing of one function as an input to another function is called function chaining can be achieved using two methods.
+
+1.addThen()
+2.compose()
+
+1.andThen()
+f1.andThen.apply(i);
+-Here f1 is applied and then for the obtained result ,f2 is applied.
+-Two functions combined to form a complex function.
+-The order of execution is from left to right.
+
+2.compose()
+f2.compose.apply();
+-Here first f2 is applied and then for the obtained result,f1 is applied.
+-The order of execution is form right to left.
+
+
+
+
+
+
+
+Data - > Raw facts
+database -stores the data
+sql -> ntg but structred query language
+by using sql can communicate with the database.
+using sql write some queries .
+
+Databases types : 
+1.RDBMS -relational databases management system 
+vendors or database providers
+--sql,
+orcale -orcale corporation,
+sqlserver -microsoft,
+postgreesql
+2.NOSQL -
+--mangodb (json)
+3.In memeory databases
+-radis --to store the data in temporary 
+-mancached.
+
+mysql server is a nothing a db server.
+
+Database can have objects
+-tabel have rows and coloumns
+Each row in the table 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
