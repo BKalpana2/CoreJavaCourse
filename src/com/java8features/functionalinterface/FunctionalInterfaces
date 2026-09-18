@@ -54,33 +54,58 @@ f2.compose.apply();
 
 
 
+Summary
+=====================================
+1.Predicate
+method -> test()
+
+1)Predict<T>:
+to test a condition with single arugument
+boolean test(T t);
+to return the boolean values only true or false
+
+2)Bipredicate<T,U>
+to test a condition with two arguments.
+boolean test(T t,U u)
+
+2.Function<T R>: 
+mathod -> apply()
+
+1)Function<T,R>
+Take something (method argument) and return something (return type of method).
+R apply(T t)
+R is the return type and T is the argument of the function.
+ 
+2)BiFunction<T,U,R>
+It takes two inputs and produce a result.
+R apply (T t,U u)
+In the above T,U are the arguments to the function.
+R is the return type of the function.
+
+3.Consumer <T>:
+method ->accept()
+
+1)Consumer<T>
+Uses or process data it takes something but returns the nothing.
+accept(T t)
+
+2)BiPredicate<T,U> -takes two arguments.
+
+4.Supplier<T> :
+method -> get()
+
+produces or provides the data,it taked nothing (no arguments passed),but returns the something(method with return type).
+	 consumer takes a value
+	 uses that value for processing
+	 but does not return anything
+	 It has an abstract method accept()
+	 void accept(T t)
 
 
-Data - > Raw facts
-database -stores the data
-sql -> ntg but structred query language
-by using sql can communicate with the database.
-using sql write some queries .
-
-Databases types : 
-1.RDBMS -relational databases management system 
-vendors or database providers
---sql,
-orcale -orcale corporation,
-sqlserver -microsoft,
-postgreesql
-2.NOSQL -
---mangodb (json)
-3.In memeory databases
--radis --to store the data in temporary 
--mancached.
-
-mysql server is a nothing a db server.
-
-Database can have objects
--tabel have rows and coloumns
-Each row in the table 
-
+Predicate -> checks
+Function  -> transforms
+Consumer  -> consumes
+Supplier  -> supplies
 
 
 

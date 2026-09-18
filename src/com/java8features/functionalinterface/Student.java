@@ -11,5 +11,8 @@ public class Student {
 	}
 	public boolean checkmarks(Student student) {
 		return student.marks>=60;
-	}                       
+	} 
+	public Student() {
+		System.out.println("Student object is created");
+	}
 }

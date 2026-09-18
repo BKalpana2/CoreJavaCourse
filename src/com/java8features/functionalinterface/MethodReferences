@@ -1,0 +1,23 @@
+MethodReferences : 
+====================================
+
+MethodReferences is one of the java 8 feature.
+
+1.MethodReferences is a shorter way to writing of the lambda expression.
+2.It generally used when the lambda is only calling an existing method.
+3.It uses the doubke colon operator ::
+	This operator is also known as method references operator.
+4.We can access both static and non static methoda by using double operators.
+
+For static method : 
+className::static method
+Demo::printmessgae;
+
+For non-static method :
+ObjectReference::method
+Demo d=new Demo()
+d::print
+
+5.When calling method using ::
+we do not provide the parenthesis for the method.
+	eg:Demo::printmessage;

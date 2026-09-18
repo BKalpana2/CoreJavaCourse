@@ -1,0 +1,5 @@
+Constructor References : 
+======================================
+Constructor References is a shorter way of write a lambda expression that creates and returns the object.
+It uses :: operator with the new keyword
+syntax:

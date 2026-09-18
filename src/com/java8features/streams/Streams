@@ -1,0 +1,41 @@
+A stream is a sequence of objects that supports the various methods which can be piplined to produce the desired result.
+
+Stream is present in the java.util.stream package contains classes for processing sequences 
+
+Difference between collection and stream. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
