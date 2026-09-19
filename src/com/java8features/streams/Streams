@@ -4,6 +4,98 @@ Stream is present in the java.util.stream package contains classes for processin
 
 Difference between collection and stream. 
 
+Stream API:
+It is used to process collections of data in simple way.
+Stream -s a flow of objects can be processed using operations like map,sort or foreach.
+
+Steps to create and use a stream : 
+1.Create a collection 
+eg:list<String> names=list.of("Kalyan","Thanuja","Demon","Rithu");
+2.create a stream from the collection
+3.Apply intermediate operation
+
+Intermediate Operations : 
+=============================
+Intermediate operation are the stream operations that process/transform a stream and return another stream (Another stream means stream object).
+
+Some examples of intermediate operations : 
+filter() -filer the elements based on a condition
+map()    -transform the each element of stream into another value.
+sort()   -sort used to sort the elements.
+distinct() -used to remove the duplicate elements .
+limit()
+
+for eg:
+	names.stream().filter(n->n.startsWith("k"))
+					  .forEach(name->System.out.println(name));
+
+-In the above .filter() method will not immediately process the elements.
+-Intermediate operations like filer(),will wait until a terminal operations is called.
+-That is the reason we call them as lazy functions.
+-Lazy means the execution is postponed.
+-A terminal operation triggers the execution of the stream pipeline.
+ 
+ Terminal operations :
+ ==========================
+ Terminal operations are stream operations that trigger the execution of the stream pipeline and produce a final result or perform an action.
+ 
+ common terminal operations : 
+ forEach() -performs an action on each element
+ collect() -collects elements into a collection.
+ toList()  -collects elements into a List.
+ count()   -returns the number of elements.
+ reduce()  -combines elements into one result.
+  
+  Terminal operations are called eager operations.
+  eager means the operation executes the stream pipeline immediately and produces a result.
+  
+  once a terminal operaton is called , the intermediate methods in the pipeline are evaluated and final result /action will be completed.
+  
+  In one stream pipeline :
+  -There can be zero,one or many intermediate operations.
+  -but there can be only one terminal operation.
+  -terminal operation ends the stream pipeline.
+  
+  A pipeline can also have no terminal operation ,
+  but the lazy intermediate operations will not process the data.
+  
+	reduce() - is a terminal operation which combines all elements of a stream and produces one final result.
+	
+	syntax : 
+	reduce(identity,operation)
+	Identity means -the intial value/starting value
+	operation means -how the elements should be combined.
+	
+	List<Integer> numbers=List.of(10,20,30,40,50);
+	
+	reduce(0,(a,b)->a+b)
+	0 -> is the intital value it is called as identity.
+	a -> is the accumulated result so far
+	b ->current element from the stream
+	
+	a+b ->combines them and returns the new accumulated result.
+	
+	Initial valu is tha above eg: 0
+	Inititally 
+	a =0 b=10 0+10=10
+	a=10 b=20  10+20=30
+	a=30 b=30  30+30=60
+	a=60 b=40  60+40=100
+	a=100b=50  100+50=150
+	
+	final result=150
+	
+	For multiplication : 
+	reduce(1,(a,b)->a*b)
+	Inititally 
+	a=1 b=10  1*10=10
+	a=10 b=20 10*20=200
+	a=200 b=30 200*30=6000
+	a=6000 b=40 6000*40=240000
+	a=240000 b=50 240000*50=12000000 
+	
+	numbers.stream().reduce()
+
 
 
 
